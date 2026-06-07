@@ -1,0 +1,653 @@
+@charset "utf-8";
+
+/***************
+@ keyframes
+****************/
+[data-wg=fade-in-scale-right]{
+  opacity: 0;
+  -webkit-transform: translate3d(-3%,0,0);
+  transform: translate3d(-3%,0,0);
+}
+
+[data-wg=fade-in-right]{
+  opacity: 0;
+  -webkit-transform: translate3d(-80px,0,0);
+  transform: translate3d(-80px,0,0);
+}
+
+[data-wg=fade-in-down]{
+  opacity: 0;
+  -webkit-transform: translate3d(0,-80px,0);
+  transform: translate3d(0,-80px,0);
+}
+
+[data-wg=fade-in-up]{
+  opacity: 0;
+  -webkit-transform: translate3d(0,80px,0);
+  transform: translate3d(0,80px,0);
+}
+
+[data-wg^=fade].animate,
+.animate [data-wg^=fade]{
+  opacity: 1;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-out;
+  -webkit-transform: translate3d(0,0,0) scale(1) rotate(0deg);
+  transform: translate3d(0,0,0) scale(1) rotate(0deg);
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+@keyframes scrolldown {
+  0%{bottom: 10%;}
+  50%{bottom: 11%;}
+  100%{bottom: 10%;}
+}
+
+/***************
+COMMON
+****************/
+html{
+  font-size: 20px;
+}
+
+body{
+  font-size: 1rem;
+}
+
+.hidden{
+  opacity: 0;
+  height: 0;
+  font-size: 0;
+  transition: 0.3s all;
+  cursor: default;
+}
+
+.show{
+  display: block;
+}
+
+.content{
+  height: 1080px;
+  padding-top: 7rem;
+}
+
+.re_content{
+  height: 100%;
+  padding: 6rem 1rem;
+}
+
+/***************
+FONTS - SIZE
+****************/
+.welfare_box p, .re_list p{
+  font-size: 0.8rem;
+}
+
+.address p, .footer p{
+  font-size: 0.9rem;
+}
+
+.intro_txt, .com_box h5,.pj_des, .recruitment, .welfare_box h5, .pj_box p, .scroll_top{
+  font-size: 1.1rem;
+}
+
+.com_box p{
+  font-size: 1.2rem;
+}
+
+.sub_des{
+  font-size: 1.1rem;
+  padding: 2rem 0;
+}
+
+.com_ttl, .games_ttl, .recruit_ttl, .re_list h5{
+  font-size: 1.3rem;
+}
+
+.sub_ttl{
+  font-size: 1.8rem;
+}
+
+.cont_des_1 h5, .cont_des_1_2 h5, .next, .welfare_box h4{
+  font-size: 2rem;
+}
+
+.project{
+  font-size: 3rem;
+}
+
+.u{
+  font-size: 4rem;
+}
+
+/***************
+FONTS - WEIGHT
+****************/
+.com_ttl, .sub_des, .cont_des_1 h5, .pj_des, .cont_des_1_2 h5, .contact_mail{
+  font-weight: 500;
+}
+
+.sub_ttl .welfare_box h4, .welfare_box h5, .cont_wrap h5, .recruitment{
+  font-weight: 600;
+}
+
+.page_ttl{
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+.sub_ttl{
+  font-weight: 800;
+}
+
+/***************
+FONTS - COLOR
+****************/
+
+.font_white, .re_list p{
+  color: #fff;
+}
+
+.font_orange, .cont_wrap h5,.welfare_box h4{
+  color: #ff6927;
+}
+
+.re_sub_ttl{
+  color: #ff6927;
+  text-align: left;
+}
+
+/***************
+ANIMATION
+****************/
+/* 02. ABOUT */
+.sub_des{
+  transition-delay: 0.2s;
+}
+
+.innovation{
+  transition-delay: 0.4s;
+}
+
+.imagination{
+  transition-delay: 0.6s;
+}
+
+.infinite{
+  transition-delay: 0.8s;
+}
+/* //02. ABOUT */
+
+/* 03. GAMES */
+.des_box{
+  transition-delay: 0.2s;
+}
+
+.games_slide_wrap, .swiper-pagination , .swiper-button-prev, .swiper-button-next{
+  transition-delay: 0.4s;
+}
+/* //03. GAMES */
+
+/* 04. RECRUIT */
+.recruit_cont{
+  transition-delay: 0.2s;
+}
+
+.re_procedure{
+  transition-delay: 0.4s;
+}
+/* //04. RECRUIT */
+
+/* 05. CONTACT */
+.address{
+  transition-delay: 0.2s;
+}
+
+.contact_box p{
+  transition-delay: 0.4s;
+}
+
+.contact_box a{
+  transition-delay: 0.5s;
+}
+
+.map{
+  width: 100%;
+  transition-delay: 0.8s;
+}
+/* //05. CONTACT */
+
+
+/***************
+01. INTRO
+****************/
+#intro{
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  /* background: url('../images/bg_intro.jpg') no-repeat top / cover; */
+}
+
+.intro_bg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+#intro .scroll_down{
+  width: 50px;
+  height: 21px;
+  position: absolute;
+  background: url('../images/scroll_down.png') no-repeat;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  animation: scrolldown 0.85s infinite;
+  z-index: 2;
+}
+
+#intro .scroll_down a{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.scroll_down p{
+  color: #fff;
+  white-space: nowrap;
+  margin: -2rem 0 0;
+}
+
+.intro_cont{
+  position:  absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  top: 55%;
+  left: 50%;
+  margin: -200px 0 0 -25vw;
+  width: 50vw;
+  z-index: 3;
+}
+
+.wg_logo{
+  width: 100%;
+  height: 100%;
+  max-width: 625px;
+  margin-bottom: 1.25rem;
+  font-size: 0;
+}
+
+.wg_logo img{
+  width: 100%;
+}
+
+.intro_txt{
+  position: relative;
+  margin-bottom: 25px;
+  color: #fff;
+  text-align: center;
+}
+
+.intro_txt strong{
+  color: #fff;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+/***************
+02. COMPANY 
+****************/
+#about{
+  position: relative;
+  background: url('../images/bg_about.jpg') no-repeat center / cover;
+}
+
+.wg_cont{
+  align-items: center;
+}
+
+.wg_cont, .pj_cont, .re_cont, .contact_cont{
+  display: flex;
+}
+
+.cont_wrap{
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0;
+}
+
+.com_box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 372px;
+  height: 452px;
+  background: url('../images/about_box.png') no-repeat center / contain;
+}
+
+.com_box p{
+  text-align: center;
+}
+
+.imagination{
+  margin: 0 1rem;
+} 
+
+.imagination:hover{
+  margin: -1.2rem 1rem 0;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+  transition: 0.3s;
+}
+
+.imagination::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.imagination:hover::after{
+  opacity: 1;
+}
+
+.innovation:hover, .infinite:hover{
+  margin: -1.2rem 0 0 0;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+  transition: 0.3s;
+}
+
+.cont_wrap h5{
+  padding: 2rem 0 1rem;
+  font-size: 1.9rem;
+}
+
+/***************
+03. GAMGES
+****************/
+#games{
+  position: relative;
+  background: url('../images/bg_game.jpg') no-repeat center / cover;
+}
+
+.background_wrap{
+  height: 100%;
+}
+
+.games_wrap{
+  padding: 0 0 2rem 0;
+} 
+
+.games_slide_wrap{
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.slide_box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.swiper-slide img{
+  width: 100%;
+}
+
+#games .swiper{
+  height: 100%;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  position: absolute;
+  top: 50%;
+  width: 27px;
+  height: 90px;
+}
+
+.swiper-button-prev{
+  left: 15%;
+  background: url('../images/game_slide_prev.png') no-repeat center / contain;
+}
+
+.swiper-button-prev:after{
+  content: "";
+}
+.swiper-button-next{
+  right: 15%;
+  background: url('../images/game_slide_next.png') no-repeat center / contain;
+}
+
+#games .swiper-button-next:after{
+  content: "";
+}
+
+#games .swiper-pagination{
+  position: absolute;
+  top: 110%;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+
+#games .swiper-pagination-bullet{
+  position: relative;
+  width: 40px;
+  height: 8px;
+  border-radius: 0;
+  background: #fff;
+  opacity: 60%;
+  transition: all 0.2s;
+}
+
+#games .swiper-pagination-bullet-active{
+  width: 100px;
+  background: #ff6927;
+  opacity: 1;
+}
+
+/***************
+04. RECRUIT
+****************/
+#recruit{
+  position: relative;
+  background: linear-gradient(180deg, #010407 0%, #203b56 100%);
+  color: #fff;
+}
+
+.recruit_wrap{
+  padding: 0 0 6rem;
+}
+
+.re_sub_ttl{
+  margin: 1rem 0;
+}
+
+.recruit_cont{ 
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.re_cont{
+  align-items: end;
+  justify-content: space-between;
+}
+
+.recruit_category_cont{
+  height: 100%;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+
+.re_stroke{
+  border-bottom: 1px solid #848484;
+}
+
+.gamejob_link{
+  position: relative;
+  width: 100%;
+  font-size: 0;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.gamejob_link:hover{
+  filter: drop-shadow(0 0 19px #333643);
+}
+
+.gamejob_link::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: all 0.3s;
+}
+
+.gamejob_link:hover::after{
+  opacity: 1;
+  transform: all 0.3s;
+}
+
+.gamejob_link img{
+  width: 100%;
+}
+
+.re_procedure{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.re_procedure div:last-child{
+  color: #ed6931;
+}
+
+.pd_arrow{
+  width: 100%;
+  max-width: 76px;
+  background: url('../images/pd_arrow.png') no-repeat center / contain;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+.re_pd{
+  background: url('../images/procedure_box.png') no-repeat center / contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding: 2.5rem;
+}
+
+/***************
+05. CONTACT
+****************/
+.contact_box p{
+  padding: 1rem;
+}
+
+.contact_cont{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contact_mail{
+  position: relative;
+  border: 3px solid #FF6927;
+  padding: 10px 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_mail img{
+  width: 12%;
+  height: 12%;
+  margin-left: 0.3rem;
+}
+
+#map{
+  width:100%;
+  height:575px;
+}
+
+.footer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 5rem;
+}
+
+.footer_cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_logo{
+  margin-bottom: 1rem;
+}
+
+.scroll_top{
+  position: relative;
+  width: 50px;
+  height: 21px;
+  background: url(../images/scroll_down.png) no-repeat center;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 30px 30px;
+  transition: all 0.5s;
+  font-size: 0;
+  transform: rotate(180deg);
+}
+
+.scroll_top:hover{
+  border-radius: 50px;
+}
+
+.scroll_topt::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.scroll_top:hover::after{
+  opacity: 1;
+}
+
+.keyword{
+  font-size: 0;
+}

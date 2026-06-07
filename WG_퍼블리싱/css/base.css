@@ -1,0 +1,88 @@
+/* FONT */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+html { scroll-behavior: smooth;}
+
+/* RESET */
+*{box-sizing: border-box; transition: all 0.3s;user-select: none;}
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,abbr,article,
+aside,command,details,figcaption,figure,footer,header,hgroup,mark,meter,nav,output,progress,section,
+summary,time { margin:0; padding:0; }
+h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,em,strong,th,figcaption { font-size:1em; font-weight:normal; font-style:normal; }
+fieldset,iframe { border:none; }
+caption,th { text-align:left; }
+table { border-collapse:collapse; border-spacing:0; }
+article,aside,footer,header,hgroup,nav,section,figure,figcaption { display:block; }
+
+/* LAYOUT */
+html { background-color:#0b0e14; }
+
+
+/* TYPE */
+body {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui,'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Montserrat' ,'Malgun Gothic', sans-serif;
+	background-color:transparent; color:#333; -webkit-font-smoothing:antialiased; 
+}
+a{display: inline-block;}
+a:link, a:visited, a:active { text-decoration:none; }
+a:hover { text-decoration:none; }
+a.block { display:block; cursor:pointer; }
+a.block span,
+a.block em { color:#08c; cursor:pointer; }
+a.block:hover { text-decoration:none; }
+a.block:hover span,
+a.block:hover em { color:#08c; text-decoration:underline; }
+
+strong, b { font-weight:bold; }
+em, cite { font-style:italic; }
+i { font-style:normal; }
+sup, sup a { color:#666; }
+sup a:hover { color:#08c; text-decoration:none; }
+abbr { border:0; }
+
+h1,h2,h3,h4,h5,h6,strong,p { color: #fff; text-align: center; }
+h1,h2 { font-weight:bold; }
+h2,h3,h4 { line-height:1; }
+h1 { font-size:24px;}
+h2 { font-size:3rem; font-family: 'Montserrat'; }
+h3 { font-size:22px;}
+h4 { font-size:50px; }
+
+ul { list-style:none outside; }
+ol { margin-bottom:18px; }
+ul.square,
+ul.circle { margin-left:2em; margin-bottom:18px; }
+ul.square { list-style:square outside; }
+ul.circle { list-style:circle outside; }
+ul ul.circle,
+ul ul.square { margin-top:4px; margin-bottom:5px; }
+li{list-style-type: none;}
+
+textarea { resize:none; }
+
+img { border:0; }
+button{ background: transparent;border: none; cursor: pointer;}
+
+.clear { clear:both; }
+.wrap{ width:1200px; margin: 0 auto; }
+.mobile, 
+.container .mobile,
+.mobile840 { display: none;}
+
+
+@media screen and (max-width: 1240px){
+  .wrap, .welfare_box_wrap{
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .pc, .container .pc{
+    display: none;
+  }
+
+  .mobile, .container .mobile{
+    display: block;
+  }
+}

@@ -1,0 +1,415 @@
+@charset "utf-8";
+@media screen and (max-width: 1270px){
+  .video {
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1440px){
+  /* 01. INTRO */
+  .intro_cont{
+    margin: -221px 0 0 -30vw;
+    width: 60vw;
+  }
+
+  h2{
+    margin-bottom: 3vw;
+  }
+
+  .intro_txt{
+    margin-bottom: 3vw;
+  }
+  /* //01. INTRO */
+
+  /* 03. GAMES */
+  /* .games_slide_wrap{
+    width: 85%;
+  } */
+  /* //03. GAMES */
+
+  /* 04. RECRUIT */
+
+  /* //04. RECRUIT */
+}
+  
+
+@media screen and (max-width: 1240px){
+  .company_wrap{
+    padding: 0 1rem 4rem;
+  }
+
+  .games_wrap {
+    padding: 0 1rem 2rem;
+}
+}
+
+@media screen and (max-width: 1024px){
+  html{
+    font-size: 16px;
+  }
+  /* COMMON */
+  h2 {
+    /* width: 65vw; */
+    margin-bottom: 3vw;
+  }
+
+  .content{
+    height: 100%;
+  }
+  /* //COMMON */
+
+  /* 01. INTRO */
+  .video{
+    height: 120vh;
+    transform: translate(-50%, 0);
+    margin-left: 50%;
+  }
+
+  .intro_cont {
+    top: 40%;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  .intro_txt {
+    margin-top: 2vw;
+    text-shadow: 0 0 4px black;
+  }
+
+  .intro_txt strong{
+    display: block;
+    margin-top: 20px;
+  }
+  /* //01. INTRO */
+
+   /* 02. ABOUT */
+  .wg_cont{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cont_wrap{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagination{
+   margin: 2rem 0;
+  }
+
+  .imagination:hover{
+    margin: 2rem 0;
+    box-shadow: 0px 4px 28px -6px rgb(0 0 0 / 25%);
+  }
+
+  .innovation:hover, .infinite:hover{
+    margin: 0;
+    box-shadow: 0px 4px 28px -6px rgb(0 0 0 / 25%);
+  }
+   /* //02. ABOUT */
+
+  /* 03. GAMES */
+  #games{
+    height: 100vh;
+    background-position: 0%;
+  }
+
+  .background_wrap{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .slide_box{
+    width: 100%;
+  }
+
+  .swiper-slide img{
+    width: 200%;
+    margin: 0 0 0 2rem;
+  }
+
+  #games .swiper-pagination{
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 50%;
+  }
+
+  .swiper-button-prev, .swiper-button-next{
+    top: 115%;
+  }
+
+  .swiper-button-prev{
+    left: 10%;
+  }
+
+  .swiper-button-next{
+    right: 10%;
+  }
+  /* //03. GAMES */
+
+  /* 04. RECRUIT */
+  .re_sub_ttl{
+    text-align: center;
+  }
+
+  .recruit_cont{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .recruit_category_wrap{
+    width: 60%;
+  }
+
+  .recruit_category li img{
+    width: 100%;
+  }
+
+  .gamejob_link{
+    width: 60%;
+    margin: 2rem auto;
+  }
+
+  .re_procedure{
+    flex-direction: column;
+  }
+
+  .re_pd{
+    margin: 0 1rem;
+  }
+
+  .pd_arrow{
+    transform: rotate(90deg) scale(0.5);
+  }
+
+  .re_cont{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .re_list_wrap, .ne, .tend{
+    position: unset;
+  }
+
+  .re_text{
+    flex-direction: column;
+  }
+
+  .re_list{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+  }
+
+  .challenge, .communication, .coperation{
+    position: unset;
+    margin: 0 auto;
+  }
+
+  .communication{
+    background: url(../images/recruit_list_box2.png) no-repeat center / 100% 100%;
+    transform: none;
+    margin: 1px auto 0;
+  }
+
+  .communication img{
+    margin: 0;
+  }
+
+  .communication_txt_1{
+    margin: 0 0 0 8rem;
+  }
+
+  .communication_txt_2{
+    margin: 0 0 0 7rem;
+  }
+
+  .communication, .coperation{
+    margin: -1px auto 0;
+  }
+
+  .welfare_box{
+    width: 40%;
+  }
+  /* //04. RECRUIT */
+
+  /* 05. CONTACT */
+  .contact_cont{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact_box{
+    flex-direction: column;
+    padding: 1.5rem 0;
+  }
+
+  .contact_mail{
+    margin: 1rem 0 0 0;
+  }
+  /* //05. CONTACT */
+
+  /* 06. FOOTER */ 
+  .footer{
+    flex-direction: column-reverse;
+  }
+
+  .footer_logo{
+    margin: 2rem;
+  } 
+
+  .footer_cont{
+    flex-direction: column;
+  }
+  /* //06. FOOTER */ 
+}
+
+@media screen and (max-width: 840px){
+  .pc_video{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 590px){
+  html{
+    font-size: 10px;
+  }
+
+  h2 {
+    height: 40px;
+    margin: 0;
+  }
+/* 02. COMPANY */ 
+  .com_box{
+    width: 80%;
+    height: 100%;
+    padding: 3rem 0;
+  }
+
+  .com_box img{
+    width: 25%;
+  }
+
+  .welfare_box {
+    height: 35vw;
+  }
+/* //02. COMPANY */ 
+
+/* 04. RECRUIT */
+.re_list{
+  padding: 0;
+}
+
+.ne{
+  width: 30%;
+}
+
+.tend{
+  width: 50%;
+}
+
+.challenge_box{
+  height: 50%;
+}
+
+.challenge, .communication, .coperation{
+  height: 70vw;
+}
+/* //04. RECRUIT */ 
+
+/* 05. CONTACT */
+  .map{
+    height: 315px;
+  }
+
+  .footer_logo{
+    width: 90%;
+  } 
+/* //05. CONTACT */
+}
+
+/* ipad - landscape */
+@media screen and (max-width: 1366px) and (orientation : landscape) {
+  /* 03. GAMES */
+  #games{
+    height: 110vh;
+  }
+
+  .swiper-slide img{
+    width: 100%;
+  }
+  /* //03. GAMES */
+} 
+
+@media screen and (max-width: 1024px) and (orientation : landscape) {
+  .pc_video{
+    display: block;
+  }
+}
+
+/* //ipad-Pro - portrait */
+
+/* Mobile - landscape */
+@media screen and (max-width : 915px) and (orientation: landscape) {
+  #intro{
+	  height: 100vh;
+  }
+  
+  /* 01. INTRO */
+  .intro_cont{
+    top: 30%;
+  }
+
+  .wg_logo{
+    width: 35%;
+  }
+
+  .intro_txt{
+    font-size: 0.5rem;
+    margin: 0;
+  }
+  /* //01. INTRO */
+  .sub_des{
+    font-size: 0.6rem;
+  }
+  /* 02. ABOUT */
+
+
+  /* 02. ABOUT */
+
+  /* 03. GAME */
+  #games{
+    height: 670px;
+  }
+
+  .swiper-button-prev, .swiper-button-next{
+    top: 120%;
+  }
+
+  .swiper-button-prev{
+    left: 5%;
+  }
+
+  .swiper-button-next{
+    right: 5%
+  }
+
+  #games .swiper-pagination{
+    top: 130%;
+  }
+  /* //03. GAMES */
+}
